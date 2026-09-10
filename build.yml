@@ -1,0 +1,36 @@
+name: build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out Repository Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Setup R
+        uses: r-lib/actions/setup-r@v2
+      - name: Install Shiny
+        run: Rscript -e 'install.packages("shiny", repos = "https://cloud.r-project.org")'
+      - name: Check R scripts
+        run: |
+          Rscript tutorials/tutorial_01_variable_workout/variables.R
+          Rscript tutorials/tutorial_02_event_data/events.R
+          Rscript tutorials/tutorial_03_randomness/randomness.R
+          Rscript -e 'parse(file = "tutorials/tutorial_03_randomness/app.R")'
+      - name: Run GatorGrader with GatorGrade
+        if: always()
+        run:  |
+          pip install gatorgrade
+          gatorgrade --config config/gatorgrade.yml
+
+
+
+
+
