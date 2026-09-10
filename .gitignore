@@ -1,0 +1,16 @@
+# MacOS
+.DS_Store
+*~
+
+# R
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
+*.pdf
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo

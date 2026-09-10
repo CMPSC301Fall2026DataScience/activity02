@@ -1,0 +1,66 @@
+# --> check the technical writing for various characteristics
+- writing/reflection.md:
+  - description: Ensure that reflection.md file exists in the writing/ directory
+    check: ConfirmFileExists
+  - description: Add your name to writing/reflection.md, then delete the 'Add your name here' placeholder
+    check: MatchFileFragment
+    options:
+      fragment: "Add Your Name Here"
+      count: 0
+      exact: true
+  - description: Ensure no TODO items remain in the reflection
+    check: MatchFileFragment
+    options:
+      fragment: "TODO"
+      count: 0
+      exact: true
+
+# --> check Station 1 file exists and is complete
+- ./src/station_01_weather_sensor/explore_weather.R:
+  - description: Ensure that explore_weather.R file exists
+    check: ConfirmFileExists
+  - description: Ensure no TODO items remain in explore_weather.R
+    check: MatchFileFragment
+    options:
+      fragment: "TODO"
+      count: 0
+      exact: true
+
+# --> check Station 2 file exists and is complete
+- ./src/station_02_social_media/explore_social_media.R:
+  - description: Ensure that explore_social_media.R file exists
+    check: ConfirmFileExists
+  - description: Ensure no TODO items remain in explore_social_media.R
+    check: MatchFileFragment
+    options:
+      fragment: "TODO"
+      count: 0
+      exact: true
+
+# --> check Station 3 file exists and is complete
+- ./src/station_03_course_survey/explore_survey.R:
+  - description: Ensure that explore_survey.R file exists
+    check: ConfirmFileExists
+  - description: Ensure no TODO items remain in explore_survey.R
+    check: MatchFileFragment
+    options:
+      fragment: "TODO"
+      count: 0
+      exact: true
+
+# --> check Station 4 file exists and is complete
+- ./src/station_04_retail_sales/explore_retail_sales.R:
+  - description: Ensure that explore_retail_sales.R file exists
+    check: ConfirmFileExists
+  - description: Ensure no TODO items remain in explore_retail_sales.R
+    check: MatchFileFragment
+    options:
+      fragment: "TODO"
+      count: 0
+      exact: true
+
+# count number of commits in the GitHub repository
+- description: Have at least a specific minimum number of commits (3) in repository
+  check: CountCommits
+  options:
+    count: 3

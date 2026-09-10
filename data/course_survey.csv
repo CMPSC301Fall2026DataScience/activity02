@@ -1,0 +1,21 @@
+respondent_id,semester,hours_studied_per_week,quiz_avg,enjoys_course,major
+R01,Fall2025,6,78,Yes,Computer Science
+R02,Fall2025,3,65,No,Business
+R03,Fall2025,9,91,Yes,Computer Science
+R04,Fall2025,2,58,No,Undeclared
+R05,Fall2025,7,85,Yes,Data Science
+R06,Fall2025,5,72,Yes,Computer Science
+R07,Fall2025,1,49,No,Business
+R08,Fall2025,8,88,Yes,Data Science
+R09,Fall2025,4,68,No,Computer Science
+R10,Fall2025,10,95,Yes,Data Science
+R11,Fall2025,6,80,Yes,Mathematics
+R12,Fall2025,2,55,No,Undeclared
+R13,Fall2025,7,83,Yes,Computer Science
+R14,Fall2025,5,74,Yes,Business
+R15,Fall2025,3,61,No,Mathematics
+R16,Fall2025,9,90,Yes,Data Science
+R17,Fall2025,4,66,No,Computer Science
+R18,Fall2025,8,87,Yes,Computer Science
+R19,Fall2025,6,79,Yes,Mathematics
+R20,Fall2025,2,52,No,Business
