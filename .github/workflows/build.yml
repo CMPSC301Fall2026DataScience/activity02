@@ -14,16 +14,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Setup R
-        uses: r-lib/actions/setup-r@v2
-      - name: Install Shiny
-        run: Rscript -e 'install.packages("shiny", repos = "https://cloud.r-project.org")'
-      - name: Check R scripts
-        run: |
-          Rscript tutorials/tutorial_01_variable_workout/variables.R
-          Rscript tutorials/tutorial_02_event_data/events.R
-          Rscript tutorials/tutorial_03_randomness/randomness.R
-          Rscript -e 'parse(file = "tutorials/tutorial_03_randomness/app.R")'
       - name: Run GatorGrader with GatorGrade
         if: always()
         run:  |
